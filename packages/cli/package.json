@@ -1,6 +1,6 @@
 {
   "name": "don-draper-seo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scan any website for common SEO issues and get a scored report with actionable fixes",
   "type": "module",
   "main": "dist/index.js",
@@ -29,6 +29,12 @@
     "opengraph"
   ],
   "license": "MIT",
+  "homepage": "https://nweingart.github.io/don-draper-seo/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nweingart/don-draper-seo.git",
+    "directory": "packages/cli"
+  },
   "engines": {
     "node": ">=18"
   },
