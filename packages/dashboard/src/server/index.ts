@@ -15,13 +15,13 @@ app.route('/api/scans', scansRoutes)
 app.route('/api/compare', compareRoutes)
 
 // Static file serving for the dashboard
-// Resolve dashboard dir relative to the file that's actually executing.
+// Resolve web dir relative to the file that's actually executing.
 // When loaded via CLI chunk (dist/server-XXX.js), __dirname = dist/
 // When loaded directly (dist/server/index.js), __dirname = dist/server/
 const __dirname = dirname(fileURLToPath(import.meta.url))
-const dashboardDir = existsSync(join(__dirname, 'dashboard'))
-  ? join(__dirname, 'dashboard')
-  : join(__dirname, '..', 'dashboard')
+const dashboardDir = existsSync(join(__dirname, 'web'))
+  ? join(__dirname, 'web')
+  : join(__dirname, '..', 'web')
 
 const MIME_TYPES: Record<string, string> = {
   '.html': 'text/html',

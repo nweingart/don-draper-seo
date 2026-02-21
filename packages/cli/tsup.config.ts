@@ -7,17 +7,18 @@ export default defineConfig([
     target: 'node18',
     outDir: 'dist',
     clean: true,
-    external: ['playwright', 'better-sqlite3'],
+    external: ['playwright'],
     banner: {
       js: '#!/usr/bin/env node',
     },
   },
   {
-    entry: ['src/server/index.ts'],
+    entry: ['src/index.ts'],
     format: ['esm'],
     target: 'node18',
-    outDir: 'dist/server',
+    outDir: 'dist',
     clean: false,
-    external: ['playwright', 'better-sqlite3'],
+    dts: true,
+    external: ['playwright'],
   },
 ])

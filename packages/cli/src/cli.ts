@@ -110,26 +110,4 @@ program
     }
   })
 
-program
-  .command('dashboard')
-  .description('Launch the web dashboard')
-  .option('--port <port>', 'Port number', '3749')
-  .option('--no-open', "Don't open browser automatically")
-  .action(async (options: { port: string; open: boolean }) => {
-    const port = parseInt(options.port)
-    const { startServer } = await import('./server/index.js')
-    await startServer(port)
-
-    if (options.open) {
-      const url = `http://localhost:${port}`
-      const { exec } = await import('child_process')
-      const cmd = process.platform === 'darwin' ? 'open' :
-                  process.platform === 'win32' ? 'start' : 'xdg-open'
-      exec(`${cmd} ${url}`)
-    }
-
-    // Keep process alive
-    process.on('SIGINT', () => process.exit(0))
-  })
-
 program.parse()

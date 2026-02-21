@@ -40,7 +40,7 @@ function computePerfScore(metrics: Omit<PerfMetrics, 'perfScore'>): number {
 }
 
 export async function measurePerformance(url: string): Promise<PerfMetrics> {
-  let playwright
+  let playwright: any
   try {
     playwright = await import('playwright')
   } catch {
@@ -53,7 +53,7 @@ export async function measurePerformance(url: string): Promise<PerfMetrics> {
 
   const browser = await playwright.chromium.launch({ headless: true })
   try {
-    const page = await browser.newPage()
+    const page: any = await browser.newPage()
 
     // Inject performance observers BEFORE navigation
     await page.evaluateOnNewDocument(() => {

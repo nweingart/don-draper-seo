@@ -3,10 +3,10 @@ import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 
 export default defineConfig({
-  root: resolve(__dirname, 'src/dashboard'),
+  root: resolve(__dirname, 'src/web'),
   plugins: [react()],
   build: {
-    outDir: resolve(__dirname, 'dist/dashboard'),
+    outDir: resolve(__dirname, 'dist/web'),
     emptyOutDir: true,
   },
   server: {

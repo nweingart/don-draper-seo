@@ -1,7 +1,7 @@
 import { Hono } from 'hono'
 import { getSiteById, insertScan } from '../db.js'
-import { scan } from '../../scanner.js'
-import type { CompareResult } from '../../types.js'
+import { scan } from 'don-draper-seo'
+import type { CompareResult } from 'don-draper-seo'
 
 const app = new Hono()
 

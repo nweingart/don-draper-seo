@@ -5,7 +5,7 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "moduleResolution": "bundler",
     "declaration": false,
-    "outDir": "dist/dashboard"
+    "outDir": "dist/web"
   },
-  "include": ["src/dashboard"]
+  "include": ["src/web"]
 }

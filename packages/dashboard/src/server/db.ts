@@ -3,7 +3,8 @@ import { join } from 'path'
 import { mkdirSync } from 'fs'
 import { homedir } from 'os'
 import { SCHEMA } from './db-schema.js'
-import type { Site, ScanRecord, CheckResult, PerfMetrics } from '../types.js'
+import type { CheckResult, PerfMetrics } from 'don-draper-seo'
+import type { Site, ScanRecord } from '../types.js'
 
 const DATA_DIR = join(homedir(), '.don-draper-seo')
 const DB_PATH = join(DATA_DIR, 'data.db')

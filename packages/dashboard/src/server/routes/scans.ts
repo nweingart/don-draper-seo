@@ -1,6 +1,6 @@
 import { Hono } from 'hono'
 import { getSiteById, insertScan, getScanById, getScansBySite, getLatestScans } from '../db.js'
-import { scan } from '../../scanner.js'
+import { scan } from 'don-draper-seo'
 import type { ScanRecord } from '../../types.js'
 
 const app = new Hono()
