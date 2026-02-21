@@ -6,6 +6,7 @@
   "scripts": {
     "build": "npm run build -w packages/cli && npm run build -w packages/dashboard",
     "build:cli": "npm run build -w packages/cli",
-    "build:dashboard": "npm run build -w packages/dashboard"
+    "build:dashboard": "npm run build -w packages/dashboard",
+    "build:site": "npm run build -w packages/site"
   }
 }
